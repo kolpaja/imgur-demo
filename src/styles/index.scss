@@ -1,0 +1,26 @@
+@import './assets/mixins';
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  @include primeFont();
+}
+.app {
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #d7d2cc, #304352);
+  background: linear-gradient(to left, #d7d2cc, #304352);
+  margin: 0px;
+  padding: 30px;
+  min-height: 100vh;
+}
+.heading {
+  color: $primary-color;
+  font-size: $font-size * 2;
+  @include primeFont();
+  width: 100%;
+  text-align: center;
+}
+.subHeading {
+  @include secondaryFont();
+  text-align: center;
+}

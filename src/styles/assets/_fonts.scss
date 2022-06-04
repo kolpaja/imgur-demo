@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Ubuntu:wght@400;700&display=swap');
+
+@mixin primeFont() {
+  font-family: 'Raleway', sans-serif;
+}
+@mixin secondaryFont() {
+  font-family: 'Ubuntu', sans-serif;
+}
