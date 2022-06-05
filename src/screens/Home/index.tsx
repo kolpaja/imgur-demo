@@ -1,5 +1,7 @@
+//gallery screen for images
+
 function Home() {
-  return <div>Home</div>;
+  return <div className='screen'>Home</div>;
 }
 
 export default Home;
