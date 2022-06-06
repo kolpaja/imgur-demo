@@ -1,0 +1,16 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color_gray;
+  padding: $xs $lg;
+  height: $xl;
+  display: flex;
+  align-items: center;
+  .logo {
+    img {
+      width: 94px;
+      height: 34px;
+    }
+  }
+}

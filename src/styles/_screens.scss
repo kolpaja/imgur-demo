@@ -8,7 +8,8 @@
 }
 
 .container {
-  padding: 0 $xl;
+  padding: $md $xl;
+  margin-top: $xl;
 }
 
 @import '../screens/Home/style';

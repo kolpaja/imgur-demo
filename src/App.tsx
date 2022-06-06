@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Counter from './components/counter';
 import { store } from './redux/store';
 import './styles/index.scss';
 import './styles/index.css';
