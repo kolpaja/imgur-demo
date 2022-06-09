@@ -4,7 +4,10 @@
 
 html {
   height: 100%;
-  overflow: hidden;
+  body {
+    overflow-y: scroll; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
 
   body {
     box-sizing: border-box;
@@ -20,37 +23,22 @@ html {
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $color_gray_dark;
 
     #root {
       height: 100%;
       width: 100%;
       max-height: 100%;
       max-width: 100%;
-      // display: grid;
-      // grid-template-columns: $nav-elements-size 1fr $nav-elements-size;
-      // grid-template-rows: $nav-elements-size auto;
-      // grid-template-areas:
-      //   "left-sidebar header right-sidebar"
-      //   "left-sidebar screen right-sidebar";
-
-      * {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-      }
-
-      ::-webkit-scrollbar {
-        position: absolute;
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      ::-webkit-scrollbar-button {
-        display: none;
-      }
+      display: grid;
     }
   }
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  -ms-overflow-style: none;
 }

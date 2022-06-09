@@ -1,5 +1,5 @@
+import Footer from '../Footer';
 import Navbar from '../Navbar';
-import SideBar from '../SideBar';
 
 interface IGlobalLayoutProps {
   children: React.ReactNode;
@@ -9,10 +9,8 @@ const GlobalLayout = ({ children }: IGlobalLayoutProps) => {
   return (
     <>
       <Navbar />
-      <div className='container'>
-        {children}
-        <SideBar />
-      </div>
+      <div className='container'>{children}</div>
+      <Footer />
     </>
   );
 };

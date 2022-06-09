@@ -1,14 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
-const API_URL = 'https://api.imgur.com/3/gallery/';
-
-export type GalleryFiltersTypes = {
-  section: 'hot' | 'top' | 'user';
-  sort: 'viral' | 'top' | 'time';
-  window: 'day' | 'week' | 'month' | 'year' | 'all';
-  page: number;
-};
+import { data as dummyData } from '../config/data';
+import { GalleryFiltersTypes } from './types';
 
 const useGalleryApi = ({
   section,
@@ -16,7 +9,7 @@ const useGalleryApi = ({
   window,
   page,
 }: GalleryFiltersTypes) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -40,7 +33,12 @@ const useGalleryApi = ({
     //     console.log(error);
     //     setError(error);
     //   });
-  }, []);
+
+    setTimeout(() => {
+      setIsLoading(false);
+      setData(dummyData);
+    }, 1000);
+  }, [setData]);
 
   return {
     data,
