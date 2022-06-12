@@ -1,35 +1,46 @@
-import React from 'react';
+type GalleryFiltersProps = {
+  onFilterChange: (event: any) => void;
+};
 
-const GalleryFilters = () => {
+const GalleryFilters = ({ onFilterChange }: GalleryFiltersProps) => {
   return (
     <div className='gallery-filters'>
       <div className='gallery-filter section'>
-        <select name='section' id='section'>
-          <option value='hot' selected>
-            HOT
-          </option>
+        <select
+          name='section'
+          defaultValue='hot'
+          id='section'
+          onChange={onFilterChange}
+        >
+          <option value='hot'>HOT</option>
           <option value='top'>TOP</option>
           <option value='user'>USER</option>
         </select>
       </div>
       <div className='filters-right'>
         <div className='gallery-filter sort'>
-          <select name='sort' id='sort'>
-            <option value='viral' selected>
-              VIRAL
-            </option>
+          <select
+            name='sort'
+            defaultValue='viral'
+            id='sort'
+            onChange={onFilterChange}
+          >
+            <option value='viral'>VIRAL</option>
             <option value='top'>TOP</option>
             <option value='time'>TIME</option>
-            {/* //todo if user sele its rising */}
+            {/* //todo if user selected its rising */}
             <option value='rising'>RISING</option>
           </select>
         </div>
 
         <div className='gallery-filter window'>
-          <select name='window' id='window'>
-            <option value='day' selected>
-              TODAY
-            </option>
+          <select
+            name='window'
+            defaultValue='day'
+            id='window'
+            onChange={onFilterChange}
+          >
+            <option value='day'>TODAY</option>
             <option value='week'>WEEK</option>
             <option value='month'>MONTH</option>
             <option value='year'>YEAR</option>

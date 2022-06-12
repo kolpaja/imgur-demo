@@ -11,7 +11,7 @@ const useGalleryApi = ({
 }: GalleryFiltersTypes) => {
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
 
   const config = {
     method: 'get',
@@ -23,22 +23,29 @@ const useGalleryApi = ({
   };
 
   useEffect(() => {
-    // axios(config)
-    //   .then(function (response) {
-    //     console.log(JSON.stringify(response.data));
-    //     setIsLoading(false);
-    //     setData(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //     setError(error);
-    //   });
-
+    // const fetchData = async () => {
+    //   await axios(config)
+    //     .then(function (response) {
+    //       console.log(response);
+    //       setIsLoading(false);
+    //       setData(response.data);
+    //     })
+    //     .catch(function (error) {
+    //       console.log(error.message);
+    //       setError(error);
+    //     });
+    // };
+    // fetchData();
     setTimeout(() => {
       setIsLoading(false);
       setData(dummyData);
     }, 1000);
-  }, [setData]);
+
+    const getGalleries = () => {
+      console.log('getGalleries');
+    };
+    getGalleries();
+  }, []);
 
   return {
     data,

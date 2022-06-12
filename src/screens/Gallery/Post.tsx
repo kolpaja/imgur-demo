@@ -1,7 +1,7 @@
 type PostProps = any;
 
 const Post = ({ post }: PostProps) => {
-  console.log('post', post.images);
+  // console.log('post', post.images);
   return (
     <div className='post'>
       <div className='post-img'>

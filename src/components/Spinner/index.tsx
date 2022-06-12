@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Spinner = () => {
-  return <div>Spinner</div>;
+  return <div style={{ color: 'white' }}>loading...</div>;
 };
 
 export default Spinner;
