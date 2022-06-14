@@ -49,12 +49,14 @@ a {
 
 .container {
   padding: 18px 60px;
+  color: #fff;
   margin-top: 60px;
   scroll-behavior: smooth;
 }
 
 .gallery-screen {
   position: relative;
+  color: #fff;
 }
 
 .gallery-screen .gallery-filters {
@@ -126,7 +128,7 @@ a {
   border: 1px solid #33353b;
   border-radius: 6px;
   padding: 4px;
-  color: #d3d3d3;
+  color: #474a51;
   width: 250px;
   min-height: 300px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -171,7 +173,7 @@ a {
 
 .post .post-wrapper .post-container .post-meta {
   padding-top: 10px;
-  background-color: #27292d;
+  background-color: #474a51;
   margin-top: 0;
   position: absolute;
   width: 100%;
@@ -202,7 +204,7 @@ a {
           align-items: center;
   letter-spacing: 1px;
   padding: 5px 10px;
-  color: #d3d3d3;
+  color: #474a51;
 }
 
 .post .post-wrapper .post-container .post-meta .post-info .item {
@@ -217,6 +219,7 @@ a {
           align-items: center;
   margin-right: 5px;
   min-height: 50px;
+  color: #fff;
   opacity: 0.61;
 }
 

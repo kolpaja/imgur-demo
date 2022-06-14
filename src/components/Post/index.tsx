@@ -19,19 +19,23 @@ const Post = ({ post }: PostProps) => {
                 alt={post.title}
               />
             </div>
+
             <div className='post-meta'>
               <div className='post-title'>{post.title}</div>
+
               <div className='post-info'>
                 <div className='item post-score'>
                   <FiArrowUp className='icon arrow-up' />
                   <span className='post-score'>{post.score}</span>
                 </div>
+
                 <div className='item post-comment'>
                   <FiMessageCircle className='icon' />
                   <span className='post-comment-count'>
                     {post.comment_count}
                   </span>
                 </div>
+
                 <div className='item post-views'>
                   <FiEye className='icon' />
                   <span className='post-views-count'>{post.views}</span>

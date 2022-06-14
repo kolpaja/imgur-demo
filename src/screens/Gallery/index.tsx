@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import Post from '../../components/Post';
 import Spinner from '../../components/Spinner';
+import GalleryFilters from '../../features/GalleryFilters';
 import { GalleryFiltersTypes } from '../../hooks/types';
 import useGalleryApi from '../../hooks/useGalleryApi';
-import GalleryFilters from './GalleryFilters';
-import Post from './Post';
 
 type InfiniteScrolling = {
   page: number;
@@ -152,7 +152,7 @@ const Gallery = () => {
       <div className='gallery-list'>
         {list && list.map((post) => <Post post={post} key={post.id} />)}
       </div>
-      {/* gallery images with infinite scrolling */}
+      {/*todo gallery images with infinite scrolling */}
     </div>
   );
 };
