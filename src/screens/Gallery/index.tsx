@@ -33,6 +33,7 @@ const Gallery = () => {
   );
 
   //load the first page of posts even after using filters
+  //loading only dummy posts
   const { data, isLoading, error } = useGalleryApi({
     sort: filters.sort,
     section: filters.section,
@@ -40,7 +41,7 @@ const Gallery = () => {
     page: infiniteScrolling.page,
   });
 
-  // using infinite scrolling to load more posts
+  // using infinite scrolling to load more posts if the api is working
   const onInfiniteScrolling = () => {
     console.log('infinite scrolling');
     const { pageYOffset } = window;

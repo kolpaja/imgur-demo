@@ -38,7 +38,7 @@ const useGalleryApi = ({
     // fetchData();
     setTimeout(() => {
       setIsLoading(false);
-      setData(dummyData.slice(0, 10));
+      setData(dummyData);
     }, 1000);
 
     const getGalleries = () => {

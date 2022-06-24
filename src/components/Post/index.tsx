@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FiArrowUp, FiEye, FiMessageCircle } from 'react-icons/fi';
+import { nrFormatter } from '../../helpers/math';
 
 type PostProps = any;
 
@@ -26,19 +27,23 @@ const Post = ({ post }: PostProps) => {
               <div className='post-info'>
                 <div className='item post-score'>
                   <FiArrowUp className='icon arrow-up' />
-                  <span className='post-score'>{post.score}</span>
+                  <span className='post-score'>
+                    {post.score.toLocaleString('en-US')}
+                  </span>
                 </div>
 
                 <div className='item post-comment'>
                   <FiMessageCircle className='icon' />
                   <span className='post-comment-count'>
-                    {post.comment_count}
+                    {nrFormatter(post.comment_count)}
                   </span>
                 </div>
 
                 <div className='item post-views'>
                   <FiEye className='icon' />
-                  <span className='post-views-count'>{post.views}</span>
+                  <span className='post-views-count'>
+                    {nrFormatter(post.views)}
+                  </span>
                 </div>
               </div>
             </div>
